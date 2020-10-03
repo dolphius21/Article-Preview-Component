@@ -1,0 +1,17 @@
+$primary-color: hsl(217, 19%, 35%);
+$secondary-color: hsl(214, 17%, 51%);
+$dark-accent-color: hsl(212, 23%, 69%);
+$light-accent-color: hsl(210, 46%, 95%);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}

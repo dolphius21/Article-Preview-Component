@@ -1,0 +1,166 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: #ecf2f8;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.article {
+  max-width: 90%;
+  margin: 3rem auto;
+  background: white;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 1px 1px 50px -20px #9eafc2;
+          box-shadow: 1px 1px 50px -20px #9eafc2;
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    width: 670px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.article-image-crop {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .article-image-crop {
+    height: 270px;
+    width: 100%;
+  }
+}
+
+.article-image {
+  width: 100%;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .article-image {
+    width: 340px;
+  }
+}
+
+.article-snippet {
+  margin-bottom: 1rem;
+  padding: 2rem 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .article-snippet {
+    margin-bottom: 0;
+  }
+}
+
+.article-snippet-heading {
+  color: #48556a;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article-snippet-heading {
+    font-size: 1.2rem;
+  }
+}
+
+.article-snippet-p {
+  color: #6d7f97;
+  font-size: 0.8rem;
+}
+
+.article-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article-footer {
+    padding: 1.25rem 2rem 2rem;
+  }
+}
+
+.article-author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.article-info {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.article-author-name {
+  color: #48556a;
+  font-size: 0.8rem;
+}
+
+.article-date {
+  color: #6d7f97;
+  font-size: 0.7rem;
+}
+
+.article-share {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.article-share p {
+  color: #9eafc2;
+}
+
+.article-share p,
+.article-share svg {
+  margin-right: 1rem;
+}
+
+.article-share-button {
+  border: none;
+  background: #ecf2f8;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */
