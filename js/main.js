@@ -11,7 +11,7 @@ function toggleBtn() {
   const articleInfo = document.querySelector(".article-info");
   const toolTip = document.querySelector(".article-btn-tooltip");
 
-  if (window.screen.width <= 767) {
+  if (window.screen.width < 768) {
     if (!active) {
       articleFooter.classList.add("bg-dark");
       articleBtn.classList.add("btn-dark");
