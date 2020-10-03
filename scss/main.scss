@@ -10,13 +10,14 @@ p {
 
 .article {
   max-width: 90%;
-  margin: 5rem auto 2rem;
+  margin: 2rem auto;
   background: white;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 50px -20px $dark-accent-color;
   @include media-lg {
     width: 670px;
     display: flex;
+    margin: 5rem auto 2rem;
   }
 
   &-image-crop {

@@ -16,7 +16,7 @@ p {
 
 .article {
   max-width: 90%;
-  margin: 5rem auto 2rem;
+  margin: 2rem auto;
   background: white;
   border-radius: 0.5rem;
   -webkit-box-shadow: 1px 1px 50px -20px #9eafc2;
@@ -29,6 +29,7 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: 5rem auto 2rem;
   }
 }
 
