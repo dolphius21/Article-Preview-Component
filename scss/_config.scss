@@ -10,6 +10,14 @@ $light-accent-color: hsl(210, 46%, 95%);
   font-family: "Manrope", sans-serif;
 }
 
+@function set-color($color) {
+  @if (lightness($color) > 40%) {
+    @return $primary-color;
+  } @else {
+    @return $dark-accent-color;
+  }
+}
+
 @mixin media-lg {
   @media screen and (min-width: 768px) {
     @content;
