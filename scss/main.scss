@@ -8,16 +8,24 @@ p {
   line-height: 1.5;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 1.5rem;
+}
+
 .article {
-  max-width: 90%;
-  margin: 2rem auto;
+  max-width: 350px;
+  margin: 0 auto 2rem;
   background: white;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 50px -20px $dark-accent-color;
   @include media-lg {
-    width: 670px;
+    max-width: 670px;
     display: flex;
-    margin: 5rem auto 2rem;
+    margin: 0 auto 2rem;
   }
 
   &-image-crop {
@@ -43,7 +51,7 @@ p {
 
   &-snippet {
     margin-bottom: 1rem;
-    padding: 2rem 2rem 0;
+    padding: 1.75rem 2rem 0;
 
     @include media-lg {
       margin-bottom: 0;
@@ -71,9 +79,6 @@ p {
     padding: 1.5rem 2rem;
     transition: 500ms ease-in-out;
     border-radius: 0 0 0.5rem 0.5rem;
-    @include media-lg {
-      padding: 1.25rem 2rem 2rem;
-    }
   }
 
   &-author-avatar {
@@ -102,7 +107,6 @@ p {
   &-share {
     flex: 2;
     display: flex;
-
     align-items: center;
     display: none;
     transition: 500ms ease-in-out;
@@ -127,6 +131,13 @@ p {
     cursor: pointer;
     transition: 500ms ease-in-out;
     position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.1rem;
+
+    svg {
+      align-self: center;
+    }
   }
 
   &-btn-tooltip {
@@ -141,6 +152,7 @@ p {
     border-radius: 0.5rem;
     background: $primary-color;
     box-shadow: 0 2px 10px 1px $dark-accent-color;
+    transition: 500ms ease-in-out;
 
     p {
       color: set-color($primary-color);

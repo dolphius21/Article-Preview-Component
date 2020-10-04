@@ -14,9 +14,24 @@ p {
   line-height: 1.5;
 }
 
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  padding: 0 1.5rem;
+}
+
 .article {
-  max-width: 90%;
-  margin: 2rem auto;
+  max-width: 350px;
+  margin: 0 auto 2rem;
   background: white;
   border-radius: 0.5rem;
   -webkit-box-shadow: 1px 1px 50px -20px #9eafc2;
@@ -25,11 +40,11 @@ p {
 
 @media screen and (min-width: 768px) {
   .article {
-    width: 670px;
+    max-width: 670px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 5rem auto 2rem;
+    margin: 0 auto 2rem;
   }
 }
 
@@ -61,7 +76,7 @@ p {
 
 .article-snippet {
   margin-bottom: 1rem;
-  padding: 2rem 2rem 0;
+  padding: 1.75rem 2rem 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -99,12 +114,6 @@ p {
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
   border-radius: 0 0 0.5rem 0.5rem;
-}
-
-@media screen and (min-width: 768px) {
-  .article-footer {
-    padding: 1.25rem 2rem 2rem;
-  }
 }
 
 .article-author-avatar {
@@ -169,6 +178,19 @@ p {
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 0.1rem;
+}
+
+.article-share-btn svg {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .article-btn-tooltip {
@@ -188,6 +210,8 @@ p {
   background: #48556a;
   -webkit-box-shadow: 0 2px 10px 1px #9eafc2;
           box-shadow: 0 2px 10px 1px #9eafc2;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 .article-btn-tooltip p {

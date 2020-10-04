@@ -1,17 +1,17 @@
 const articleBtn = document.querySelector(".article-share-btn");
+const articleFooter = document.querySelector(".article-footer");
+const articleShare = document.querySelector(".article-share");
+const articleAvatar = document.querySelector(".article-author-avatar");
+const articleInfo = document.querySelector(".article-info");
+const toolTip = document.querySelector(".article-btn-tooltip");
 
 let active = false;
 
 articleBtn.addEventListener("click", toggleBtn);
+window.addEventListener("resize", removeCallout);
 
 function toggleBtn() {
-  const articleFooter = document.querySelector(".article-footer");
-  const articleShare = document.querySelector(".article-share");
-  const articleAvatar = document.querySelector(".article-author-avatar");
-  const articleInfo = document.querySelector(".article-info");
-  const toolTip = document.querySelector(".article-btn-tooltip");
-
-  if (window.screen.width < 768) {
+  if (window.innerWidth < 768) {
     if (!active) {
       articleFooter.classList.add("bg-dark");
       articleBtn.classList.add("btn-dark");
@@ -37,5 +37,20 @@ function toggleBtn() {
       toolTip.style.display = "none";
       active = false;
     }
+  }
+}
+
+function removeCallout() {
+  if (window.innerWidth < 768) {
+    articleFooter.classList.remove("bg-dark");
+    articleBtn.classList.remove("btn-dark");
+    articleShare.style.display = "none";
+    articleAvatar.style.display = "block";
+    articleInfo.style.display = "block";
+    active = false;
+  } else {
+    articleBtn.classList.remove("btn-dark");
+    toolTip.style.display = "none";
+    active = false;
   }
 }
