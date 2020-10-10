@@ -21,7 +21,7 @@ p {
   margin: 0 auto 2rem;
   background: white;
   border-radius: 0.5rem;
-  box-shadow: 1px 1px 50px -20px $dark-accent-color;
+  box-shadow: 1px 1px 40px -10px $dark-accent-color;
   @include media-lg {
     max-width: 670px;
     display: flex;
@@ -86,7 +86,7 @@ p {
     height: 40px;
     border-radius: 50%;
     margin-right: 1rem;
-    transition: 500ms ease-in-out;
+    animation: opacity 0.5s ease-out;
   }
 
   &-info {
@@ -120,6 +120,10 @@ p {
     svg {
       margin-right: 1rem;
     }
+
+    svg:hover {
+      animation: up 0.5s forwards;
+    }
   }
 
   &-share-btn {
@@ -152,11 +156,19 @@ p {
     border-radius: 0.5rem;
     background: $primary-color;
     box-shadow: 0 2px 10px 1px $dark-accent-color;
-    transition: 500ms ease-in-out;
+    @include media-lg {
+      transform-origin: 50% 100%;
+      animation: tooltip 0.4s ease-in;
+    }
 
     p {
       color: set-color($primary-color);
       font-size: 0.7rem;
+    }
+    svg:hover {
+      @include media-lg {
+        animation: up 0.5s forwards;
+      }
     }
   }
 
@@ -191,5 +203,37 @@ p {
     path {
       fill: $light-accent-color;
     }
+  }
+}
+
+@keyframes tooltip {
+  0% {
+    transform: translateY(10px);
+    transform: scale(0, 0);
+  }
+  70% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: translateY(0);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
